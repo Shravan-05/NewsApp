@@ -1,0 +1,101 @@
+/* Container for the card */
+.news-card-container {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card styling with a modern look */
+.news-card {
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    border: none; /* Remove border for a clean look */
+    overflow: hidden; /* Ensures image and content stay inside the card */
+    background-color: #ffffff; /* White background for a minimalist look */
+    transition: all 0.3s ease; /* Smooth transitions */
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 0.8s forwards; /* Apply fade-in animation */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(20px); /* Slightly move down */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+        transform: translateY(0); /* Reset position */
+    }
+}
+
+/* Hover effect: Scale and add a stronger shadow */
+.news-card:hover {
+    transform: translateY(-8px); /* Lift the card slightly */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Styling for the image */
+.news-card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensures the image fits well */
+    height: 200px; /* Fixed height for uniformity */
+    width: 100%; /* Full width */
+}
+
+/* Title styling */
+.news-card .card-title {
+    font-size: 1.5rem; /* Increased size for better readability */
+    font-weight: bold; /* Bold for emphasis */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 0.5rem; /* Adjust margin for spacing */
+    line-height: 1.4; /* Improved line height */
+}
+
+/* Description text */
+.news-card .card-text {
+    font-size: 1rem; /* Slightly larger text */
+    color: #555; /* Medium gray for better readability */
+    line-height: 1.6; /* More spacing for readability */
+    margin-bottom: 1rem;
+}
+
+/* Small text for author and time */
+.news-card .text-muted {
+    font-size: 0.85rem;
+    color: #888; /* Light gray */
+}
+
+/* Badge styling */
+.news-card .badge {
+    position: absolute; /* Fix position */
+    top: 15px; /* Position at the top */
+    right: 15px; /* Align to the right */
+    background-color: #007bff; /* Primary color */
+    color: #ffffff; /* White text for contrast */
+    padding: 0.5rem 0.75rem; /* Padding for better sizing */
+    border-radius: 20px; /* Rounded badge */
+    font-size: 0.85rem; /* Slightly smaller text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Button styling */
+.news-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 0.9rem;
+    padding: 10px 15px; /* Slightly larger padding */
+    border-radius: 6px; /* Rounded buttons for a modern feel */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.news-card .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+/* Text and spacing adjustments */
+.news-card .card-body {
+    padding: 20px; /* Extra padding for a clean, spacious look */
+}

@@ -1,0 +1,132 @@
+/* Navbar.css */
+.navbar {
+  background-color: #ffffff; /* Clean white background for a fresh look */
+  padding: 1rem 1rem; /* Increased padding for a spacious feel */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s ease; /* Smooth transition effects */
+  z-index: 1000; /* Keep navbar above other content */
+}
+
+.navbar-brand {
+  font-size: 2.5rem; /* Increased brand font size */
+  font-weight: bold; /* Bold font weight */
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient color for text */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text fill transparent */
+}
+
+.nav-link {
+  font-size: 1.5rem; /* Increased link size for visibility */
+  margin: 0 1.5rem; /* Spacing between links */
+  color: #343a40; /* Dark gray color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for interaction */
+}
+
+.nav-link:hover {
+  color: #ff7e5f; /* Change color on hover */
+}
+
+.nav-link.active {
+  font-weight: bold; /* Bold for active link */
+  color: #ff7e5f; /* Change color for active link */
+  border-bottom: 3px solid #ff7e5f; /* Underline effect for active link */
+}
+
+.search-input {
+  width: 250px; /* Default width for search input */
+  border: 1px solid #ced4da; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.4s ease; /* Smooth width transition */
+}
+
+.search-input:focus {
+  width: 300px; /* Wider on focus */
+  border-color: #ff7e5f; /* Change border color on focus */
+}
+
+.btn {
+  font-size: 1.25rem; /* Increased button text size */
+  padding: 0.5rem 1rem; /* Adequate padding for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn-primary {
+  background-color: #ff7e5f; /* Primary button color */
+  color: #ffffff; /* White text color */
+}
+
+.btn-primary:hover {
+  background-color: #feb47b; /* Lighter shade on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Danger button color */
+  color: #ffffff; /* White text color */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
+
+.fixed-top {
+  position: fixed; /* Fix navbar at the top */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+}
+
+body {
+  padding-top: 80px; /* Avoid overlap of navbar with content */
+  background-color: #f8f9fa; /* Light gray background for body */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .navbar-brand {
+      font-size: 2rem; /* Adjust brand font size for tablets */
+  }
+
+  .nav-link {
+      font-size: 1.4rem; /* Adjust link text size for tablets */
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+      font-size: 1.3rem; /* Adjust link text size for medium devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 0.5rem; /* Less padding on small screens */
+  }
+
+  .navbar-brand {
+      font-size: 1.8rem; /* Further adjust brand font size for small screens */
+  }
+
+  .nav-link {
+      font-size: 1.2rem; /* Adjust link text size */
+  }
+
+  .btn {
+      font-size: 1rem; /* Adjust button text size */
+  }
+
+  .search-input {
+      width: 100%; /* Full width for smaller screens */
+      margin-top: 0.5rem; /* Margin for spacing */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+      font-size: 1rem; /* Smaller link size for mobile devices */
+      margin: 0 1rem; /* Reduce spacing between links */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Smaller button text size */
+  }
+}
